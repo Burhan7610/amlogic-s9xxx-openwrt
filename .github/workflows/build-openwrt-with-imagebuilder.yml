@@ -133,9 +133,9 @@ jobs:
 
       - name: Build OpenWrt firmware
         if: ${{ steps.imagebuilder.outputs.status }} == 'success' && !cancelled()
-        uses: Burhan7610/amlogic-s9xxx-openwrt@main
+        uses: ophub/amlogic-s9xxx-openwrt@main
         with:
-          openwrt_path: openwrt/bin/targets/*/*/*rootfs.tar.gz
+          openwrt_path: openwrt/bin/targets/armvirt/64/*rootfs.tar.gz
           openwrt_board: ${{ inputs.openwrt_board }}
           openwrt_kernel: ${{ inputs.openwrt_kernel }}
           auto_kernel: ${{ inputs.auto_kernel }}
