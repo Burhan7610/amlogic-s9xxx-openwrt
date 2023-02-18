@@ -135,7 +135,7 @@ jobs:
         if: ${{ steps.imagebuilder.outputs.status }} == 'success' && !cancelled()
         uses: ophub/amlogic-s9xxx-openwrt@main
         with:
-          openwrt_path: openwrt/bin/targets/armvirt/64/*rootfs.tar.gz
+          openwrt_path: /home/runner/work/amlogic-s9xxx-openwrt/amlogic-s9xxx-openwrt/openwrt/*rootfs.tar.gz
           openwrt_board: ${{ inputs.openwrt_board }}
           openwrt_kernel: ${{ inputs.openwrt_kernel }}
           auto_kernel: ${{ inputs.auto_kernel }}
